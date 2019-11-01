@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 :root {
-  --primaryColor: #FF9D34;
+  --primaryColor: #ff9d34;
   --mainWhite: #fff;
   --blueColor: #014073;
   --offWhite: #f7f7f7;
@@ -21,7 +21,7 @@ body {
   padding-top: 66px;
   color: var(--mainBlack);
   background: var(--mainWhite);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1.4;
 }
 h1 {
@@ -94,7 +94,6 @@ img {
   text-transform: capitalize;
   margin: 2rem 0;
   padding: 1rem;
-  
 }
 /* end of globals */
 /* Navbar */
@@ -143,7 +142,6 @@ img {
   text-align: center;
   font-size: 1rem;
   font-weight: 400;
-  
 }
 .nav-links a:hover {
   color: var(--primaryColor);
@@ -166,7 +164,7 @@ img {
 
 .nav-phone a span {
   display: block;
-  font-size: .7rem;
+  font-size: 0.7rem;
   color: var(--mainBlack);
 }
 
@@ -298,7 +296,7 @@ img {
 .services p {
   width: 80%;
   margin: 0 auto;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 @media screen and (min-width: 992px) {
   .services-center {
@@ -350,8 +348,8 @@ img {
 
 .img-container {
   position: relative;
-  max-height: 225px;
-    overflow: hidden;
+  max-height: 150px;
+  overflow: hidden;
 }
 .img-container img {
   width: 100%;
@@ -364,8 +362,8 @@ img {
   left: 0;
   background: rgba(0, 0, 0, 0.8);
   color: var(--mainWhite);
-  padding: .5rem 1rem;
-  font-size: .7rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.7rem;
   text-align: center;
   transition: var(--mainTransition);
 }
@@ -431,7 +429,6 @@ img {
 }
 .desc h3 {
   text-transform: capitalize;
-  
 }
 .desc p {
   line-height: 1.5;
@@ -439,7 +436,6 @@ img {
 .info h3,
 .info h6 {
   text-transform: capitalize;
-  
 }
 
 .info h6 {
@@ -452,7 +448,7 @@ img {
   font-size: 1rem;
   margin-right: 1rem;
 }
-.info h6 span{
+.info h6 span {
   font-weight: 700;
 }
 .room-extras {
@@ -465,7 +461,6 @@ img {
 .room-extras h6 {
   text-transform: capitalize;
   font-weight: 700;
-  
 }
 .extras {
   list-style-type: none;
@@ -482,7 +477,7 @@ img {
 
 .extras li:before {
   display: block;
-  content: '';
+  content: "";
   width: 8px;
   height: 8px;
   border-radius: 100%;
@@ -535,8 +530,9 @@ img {
 }
 /* end of roomlist */
 /*  rooms fitler*/
-input, select {
-  font-family: 'Poppins';
+input,
+select {
+  font-family: "Poppins";
 }
 .filter-container {
   padding: 2rem 0;
@@ -557,7 +553,7 @@ input, select {
 }
 .form-group label {
   display: block;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 .form-control {
   width: 100%;
