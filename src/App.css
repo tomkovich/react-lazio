@@ -116,6 +116,8 @@ img {
 .nav-header {
   display: flex;
   justify-content: space-between;
+  height: 100%;
+  align-items: center;
 }
 .nav-btn {
   background: transparent;
@@ -148,6 +150,7 @@ img {
 }
 
 .nav-phone {
+  display: none;
   margin-left: auto;
   height: 100%;
 }
@@ -169,10 +172,16 @@ img {
 }
 
 .show-nav {
-  height: 100px;
+  min-height: 60vh;
+  background-color: var(--blueColor);
+  padding: 1rem 0;
 }
 @media screen and (min-width: 768px) {
+  .nav-phone {
+    display: block;
+  }
   .nav-btn {
+    height: 100%;
     display: none;
   }
   .nav-center {
