@@ -19,7 +19,7 @@ export default class Navbar extends Component {
       <nav className="navbar">
         <div className="nav-center">
           <div className="nav-header">
-            <Link to="/">
+            <Link to="/" className="logo">
               <img src={logo} alt="logo" />
             </Link>
             <button
@@ -40,6 +40,12 @@ export default class Navbar extends Component {
               <Link to="/rooms"> Rooms </Link>
             </li>
           </ul>
+          <div className="nav-phone">
+            <a href="tel:+37435732245">
+              +37435732245
+              <span>Toll Free & 24/7 Available</span>
+            </a>
+          </div>
         </div>
       </nav>
     );

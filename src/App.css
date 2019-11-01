@@ -4,23 +4,24 @@
   box-sizing: border-box;
 }
 :root {
-  --primaryColor: #af9a7d;
+  --primaryColor: #FF9D34;
   --mainWhite: #fff;
+  --blueColor: #014073;
   --offWhite: #f7f7f7;
   --mainBlack: #222;
   --mainGrey: #ececec;
   --darkGrey: #cfcfcf;
-  --mainTransition: all 0.3s linear;
+  --mainTransition: all 0.25s linear;
   --mainSpacing: 3px;
-  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
-  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.1);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.1);
 }
 /* globals */
 body {
   padding-top: 66px;
   color: var(--mainBlack);
   background: var(--mainWhite);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Poppins', sans-serif;
   line-height: 1.4;
 }
 h1 {
@@ -53,16 +54,25 @@ h6 {
   margin-bottom: 1.5em;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
 .btn-primary {
   display: inline-block;
   text-decoration: none;
-  letter-spacing: var(--mainSpacing);
+  font-weight: 700;
   color: var(--mainBlack);
   background: var(--primaryColor);
   padding: 0.4rem 0.9rem;
   border: 3px solid var(--primaryColor);
   transition: var(--mainTransition);
-  text-transform: uppercase;
   cursor: pointer;
 }
 .btn-primary:hover {
@@ -84,7 +94,7 @@ h6 {
   text-transform: capitalize;
   margin: 2rem 0;
   padding: 1rem;
-  letter-spacing: var(--mainSpacing);
+  
 }
 /* end of globals */
 /* Navbar */
@@ -93,10 +103,17 @@ h6 {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0.75rem 2rem;
-  background: var(--offWhite);
+  height: 70px;
+  background: var(--blueColor);
   z-index: 1;
 }
+
+.nav-center {
+  height: 100%;
+  align-items: center;
+  padding: 0 3rem;
+}
+
 .nav-header {
   display: flex;
   justify-content: space-between;
@@ -121,15 +138,36 @@ h6 {
   display: block;
   text-decoration: none;
   padding: 1rem 0;
-  color: var(--mainBlack);
+  color: var(--mainWhite);
   transition: var(--mainTransition);
   text-align: center;
   font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: var(--mainSpacing);
+  font-weight: 400;
+  
 }
 .nav-links a:hover {
   color: var(--primaryColor);
+}
+
+.nav-phone {
+  margin-left: auto;
+  height: 100%;
+}
+
+.nav-phone a {
+  color: var(--mainWhite);
+  display: block;
+  height: 100%;
+  line-height: 1.3rem;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  background-color: var(--primaryColor);
+}
+
+.nav-phone a span {
+  display: block;
+  font-size: .7rem;
+  color: var(--mainBlack);
 }
 
 .show-nav {
@@ -159,32 +197,30 @@ h6 {
 .defaultHero,
 .roomsHero {
   min-height: calc(100vh - 66px);
-  background: url("./images/defaultBcg.jpeg") center/cover no-repeat;
+  background: url("./images/mainbg-1.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .roomsHero {
-  background-image: url("./images/room-2.jpeg");
+  background-image: url("./images/mainbg.jpg");
   min-height: 60vh;
 }
 /* End of Hero */
 /* Banner */
 .banner {
   display: inline-block;
-  background: rgba(0, 0, 0, 0.5);
   color: var(--mainWhite);
   padding: 2rem 1rem;
   text-align: center;
   text-transform: capitalize;
-  letter-spacing: var(--mainSpacing);
 }
 .banner h1 {
   font-size: 2.5rem;
 }
 .banner div {
   width: 10rem;
-  height: 5px;
+  height: 2px;
   background: var(--primaryColor);
   margin: 1.7rem auto;
 }
@@ -216,13 +252,12 @@ h6 {
 }
 .section-title h4 {
   font-size: 2rem;
-  letter-spacing: var(--mainSpacing);
   text-transform: capitalize;
   margin-bottom: 1rem;
 }
 .section-title div {
   width: 5rem;
-  height: 5px;
+  height: 2px;
   margin: 0 auto;
   background: var(--primaryColor);
 }
@@ -233,7 +268,7 @@ h6 {
   padding: 5rem 0;
 }
 .services {
-  background: var(--darkGrey);
+  background: var(--mainWhite);
   text-align: center;
 }
 .services-center {
@@ -245,17 +280,25 @@ h6 {
   grid-column-gap: 50px;
 }
 .service span {
+  background: var(--blueColor);
+  width: 60px;
+  height: 60px;
+  line-height: 50px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 100%;
   display: inline-block;
-  color: var(--primaryColor);
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+  color: var(--mainWhite);
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 .services h6 {
-  letter-spacing: var(--mainSpacing);
+  color: var(--mainBlack);
 }
 .services p {
   width: 80%;
   margin: 0 auto;
+  font-size: .9rem;
 }
 @media screen and (min-width: 992px) {
   .services-center {
@@ -307,6 +350,8 @@ h6 {
 
 .img-container {
   position: relative;
+  max-height: 225px;
+    overflow: hidden;
 }
 .img-container img {
   width: 100%;
@@ -319,17 +364,15 @@ h6 {
   left: 0;
   background: rgba(0, 0, 0, 0.8);
   color: var(--mainWhite);
-  padding: 0.3rem 0.6rem 0.5rem;
-  border-bottom-right-radius: 1rem;
-  font-size: 0.5rem;
+  padding: .5rem 1rem;
+  font-size: .7rem;
   text-align: center;
   transition: var(--mainTransition);
 }
 .price-top h6 {
   margin-bottom: 0;
-  font-size: 0.9rem;
-  font-weight: 300;
-  letter-spacing: var(--mainSpacing);
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 .room-link {
   position: absolute;
@@ -351,18 +394,17 @@ h6 {
   transform: translate(-50%, -50%) scale(1);
 }
 .room-info {
-  background: var(--darkGrey);
+  background: var(--mainWhite);
   text-transform: capitalize;
   padding: 0.5rem 0;
   text-align: center;
   font-weight: 700;
-  letter-spacing: var(--mainSpacing);
 }
 /* end of room  */
 /* single room*/
 
 .single-room {
-  padding: 5rem 0 0 0;
+  padding: 2rem;
 }
 .single-room-images {
   width: 80vw;
@@ -374,6 +416,7 @@ h6 {
 }
 .single-room-images img {
   width: 100%;
+  max-width: 500px;
   display: block;
 }
 .single-room-info {
@@ -388,7 +431,7 @@ h6 {
 }
 .desc h3 {
   text-transform: capitalize;
-  letter-spacing: var(--mainSpacing);
+  
 }
 .desc p {
   line-height: 1.5;
@@ -396,19 +439,33 @@ h6 {
 .info h3,
 .info h6 {
   text-transform: capitalize;
-  letter-spacing: var(--mainSpacing);
+  
 }
 
 .info h6 {
-  font-weight: 300;
+  font-weight: 400;
+}
+.info i {
+  text-align: center;
+  display: inline-block;
+  color: var(--blueColor);
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+.info h6 span{
+  font-weight: 700;
 }
 .room-extras {
-  width: 80vw;
-  margin: 0 auto 3rem auto;
+  background-color: var(--primaryColor);
+  width: 100%;
+  margin: 0 auto;
+  padding: 5vw;
+  color: var(--mainWhite);
 }
 .room-extras h6 {
   text-transform: capitalize;
-  letter-spacing: var(--mainSpacing);
+  font-weight: 700;
+  
 }
 .extras {
   list-style-type: none;
@@ -417,15 +474,30 @@ h6 {
   grid-column-gap: 2rem;
   grid-row-gap: 1rem;
 }
+
 .extras li {
-  list-style-type: square;
+  padding-left: 20px;
+  position: relative;
 }
+
+.extras li:before {
+  display: block;
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: var(--blueColor);
+  left: 0;
+  top: 35%;
+  position: absolute;
+}
+
 @media screen and (min-width: 992px) {
   .single-room-images,
   .single-room-info,
   .room-extras {
-    width: 95vw;
-    max-width: 1170px;
+    width: 100%;
+    max-width: 100%;
   }
   .single-room-info {
     display: grid;
@@ -439,7 +511,7 @@ h6 {
 /* end of single room*/
 /* roomlist */
 .roomslist {
-  padding: 5rem 0;
+  padding: 2rem 0;
 }
 .roomslist-center {
   width: 80vw;
@@ -463,11 +535,17 @@ h6 {
 }
 /* end of roomlist */
 /*  rooms fitler*/
+input, select {
+  font-family: 'Poppins';
+}
 .filter-container {
-  padding: 5rem 0;
+  padding: 2rem 0;
 }
 .filter-form {
+  background-color: var(--primaryColor);
+  padding: 2rem;
   width: 60vw;
+  color: var(--mainWhite);
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(202px, 1fr));
@@ -479,22 +557,29 @@ h6 {
 }
 .form-group label {
   display: block;
-  letter-spacing: var(--mainSpacing);
-  margin-bottom: 0.5rem;
+  margin-bottom: .5rem;
 }
 .form-control {
   width: 100%;
-  background: transparent;
+  background-color: var(--blueColor);
   font-size: 1rem;
+  border-color: var(--mainWhite);
+  color: var(--mainWhite);
 }
+.form-control option {
+  background-color: var(--blueColor);
+}
+
 .size-inputs {
   display: flex;
 }
 .size-input {
   width: 40%;
   padding: 0.2rem;
-  border: 1px solid var(--mainBlack);
+  background-color: transparent;
+  border: 2px solid var(--mainWhite);
   border-radius: 0.3rem;
+  color: var(--mainWhite);
   margin-right: 0.3rem;
 }
 .single-extra label {

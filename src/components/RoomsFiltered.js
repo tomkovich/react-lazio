@@ -49,90 +49,91 @@ const RoomsFiltered = props => {
       <Title title="Search Rooms" />
       <form className="filter-form">
         <div className="form-group">
-          <label htmlFor="type">
-            room type
-            <select
-              name="type"
-              id="type"
-              value={type}
-              className="form-control"
-              onChange={handleChange}
-            >
-              {types}
-            </select>
-          </label>
+          <label htmlFor="type">room type</label>
+          <select
+            name="type"
+            id="type"
+            value={type}
+            className="form-control"
+            onChange={handleChange}
+          >
+            {types}
+          </select>
         </div>
 
         <div className="form-group">
-          <label htmlFor="capacity">
-            Guests
-            <select
-              name="capacity"
-              id="capacity"
-              value={capacity}
-              className="form-control"
-              onChange={handleChange}
-            >
-              {people}
-            </select>
-          </label>
+          <label htmlFor="capacity">Guests</label>
+          <select
+            name="capacity"
+            id="capacity"
+            value={capacity}
+            className="form-control"
+            onChange={handleChange}
+          >
+            {people}
+          </select>
         </div>
 
         <div className="form-group">
-          <label htmlFor="price">
-            Room price ${price}
+          <label htmlFor="price">Room price ${price}</label>
+          <input
+            type="range"
+            name="price"
+            min={minPrice}
+            max={maxPrice}
+            id="price"
+            value={price}
+            onChange={handleChange}
+            className="form-control"
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="size">Room size</label>
+          <div className="size-inputs">
             <input
-              type="range"
-              name="price"
-              min={minPrice}
-              max={maxPrice}
-              id="price"
-              value={price}
+              type="number"
+              name="minSize"
+              min={minSize}
+              id="minSize"
+              value={minSize}
               onChange={handleChange}
-              className="form-control"
+              className="size-input"
             />
-          </label>
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="size">
-            Room size
-            <div className="size-inputs">
-              <input
-                type="number"
-                name="minSize"
-                min={minSize}
-                id="minSize"
-                value={minSize}
-                onChange={handleChange}
-                className="size-input"
-              />
-            </div>
-            <div className="size-inputs">
-              <input
-                type="number"
-                name="maxSize"
-                min={maxSize}
-                id="maxSize"
-                value={maxSize}
-                onChange={handleChange}
-                className="size-input"
-              />
-            </div>
-          </label>
+            <input
+              type="number"
+              name="maxSize"
+              min={maxSize}
+              id="maxSize"
+              value={maxSize}
+              onChange={handleChange}
+              className="size-input"
+            />
+          </div>
         </div>
 
         <div className="form-group">
           <div className="single-extra">
-            <input type="checkbox" name="breakfast" id="breakfast" checked={breakfast} onChange={handleChange}/>
+            <input
+              type="checkbox"
+              name="breakfast"
+              id="breakfast"
+              checked={breakfast}
+              onChange={handleChange}
+            />
             <label>breakfast</label>
           </div>
           <div className="single-extra">
-            <input type="checkbox" name="pets" id="pets" checked={pets} onChange={handleChange}/>
+            <input
+              type="checkbox"
+              name="pets"
+              id="pets"
+              checked={pets}
+              onChange={handleChange}
+            />
             <label>pets</label>
           </div>
         </div>
-
       </form>
     </section>
   );

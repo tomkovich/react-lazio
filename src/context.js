@@ -45,7 +45,7 @@ export default class RoomProvider extends Component {
       let featured = rooms.filter(room => room.featured === true);
       let maxPrice = Math.max(...rooms.map(item => item.price));
       let maxSize = Math.max(...rooms.map(item => item.size));
-      console.log(response)
+     
       this.setState({
         featured,
         rooms,
